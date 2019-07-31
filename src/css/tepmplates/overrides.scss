@@ -1,0 +1,45 @@
+.fancybox-button  {
+  width: 100px;
+  height: 100px;
+  color: #ffffff;
+
+  @include mobile-max {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.fancybox-slide--html .fancybox-close-small {
+  color: #ffffff;
+}
+
+.fancybox-slide--html {
+  padding: 0;
+}
+
+.fancybox-content {
+  flex-direction: column;
+  min-height: 100%;
+  padding: 0;
+}
+
+.fancybox-slide--html .fancybox-close-small{
+  padding: 0;
+}
+
+#st-1.st-animated {
+  max-width: 680px;
+}
+
+#st_gdpr_iframe {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

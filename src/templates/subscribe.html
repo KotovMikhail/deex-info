@@ -1,0 +1,27 @@
+<div class="modal__wrap">
+  <div class=" main-subscribe-block">
+    <button type="button" class="main-subscribe-block__close close-btn"></button>
+    <div class="main-subscribe-block__title">Следите за нашими новостями</div>
+    <div class="main-subscribe-block__subscribe-title">Подписывайтесь на нашу рассылку</div>
+    <div class="subscribe">
+      <form class="subscribe__form js-validation-form" action="sendmail.php">
+        <div class="subscribe__input-wrapper">
+          <input type="email" class="subscribe__input form-control" name="email" placeholder="E-mail"
+            pattern="\S+@[a-z]+.[a-z]+" required>
+          <button type="submit" class="subscribe__btn" ></button>
+        </div>
+      </form>
+    </div>
+    <div class="main-subscribe-block__t">Или</div>
+    <a href="https://t.me/deex_exchange" target="_blank" class="main-subscribe-block__btn btn_telegram" >Присоединиться к DEEX в Telegram</a>
+  </div>
+</div>
+
+<div class="modal__success-wrap">
+  <div class="modal__success">
+    <h3 class="modal__success-title">Спасибо за ваш запрос.</h3>
+    <p class="modal__success-text">Наша команда свяжется с вами.</p>
+    <button class="modal__success-close">
+    </button>
+  </div>
+</div>
