@@ -9,6 +9,23 @@
   flex-direction: column;
   min-height: 100%;
 
+  &__abstr{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100vw;
+      height: 100vh;
+      z-index: -99999;
+    }
+  }
+
+  // background-image: url('../../img/abstr-bg.png');
+  // background-repeat: no-repeat;
+  // background-position: center center;
+  // background-size: 95%;
+
   // filter: grayscale(100%);
   // transition: all 2s;
   // cursor: pointer;
@@ -33,14 +50,16 @@
 }
 
 .modal-list {
+  position: relative;
+  z-index: 99999;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
   height: 75vh;
   @include list-reset();
-  margin-bottom: 40px;
-  flex: 1 0 auto;
+  padding: 9.021vw;
+
 
   @include tablet-max {
     align-items: flex-start;
@@ -90,7 +109,7 @@
     }
 
     &--second {
-      background-image: url('../../img/morphey.jpg');
+      background-image: url('../../img/morphey.png');
     }
 
     &--third {

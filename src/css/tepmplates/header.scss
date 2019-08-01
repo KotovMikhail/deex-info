@@ -27,6 +27,11 @@
   &__logo {
     margin-right: 50px;
 
+    &--modals {
+      position: relative;
+      z-index: 99999;
+    }
+
     @include desktop-max {
       margin-right: 0;
       margin-bottom: 25px;
