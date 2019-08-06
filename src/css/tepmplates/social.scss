@@ -1,0 +1,22 @@
+.social {
+  @include list-reset;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  grid-auto-rows: 55px;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: size($width-desktop);
+  margin: 0 auto;
+
+  padding-top: size(20px);
+  padding-bottom: size(20px);
+
+  @include mobile {
+    padding-top: 30px;
+    padding-bottom: 25px;
+  }
+
+}

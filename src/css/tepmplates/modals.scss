@@ -3,92 +3,111 @@
   right: 0;
   bottom: 0;
   display: none;
-  height: 100vh;
+  width: 100vw;
+  min-height: 100vh;
   background-color: $black;
   overflow-y: hidden;
   flex-direction: column;
-  min-height: 100%;
 
-  &__abstr{
+  @include tablet {
+    width: 100%;
+  }
+
+  &__abstr {
     position: absolute;
     width: 100%;
     height: 100%;
 
     img {
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      height: 100%;
       z-index: -99999;
     }
-  }
-
-  // background-image: url('../../img/abstr-bg.png');
-  // background-repeat: no-repeat;
-  // background-position: center center;
-  // background-size: 95%;
-
-  // filter: grayscale(100%);
-  // transition: all 2s;
-  // cursor: pointer;
-
-  // &:hover {
-  //   filter: none;
-  // }
-
-  @include tablet-max {
-    width: auto;
-    height: 100%;
-    overflow-y: visible;
   }
 
   &__top {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: size(40px);
+    padding-bottom: size(40px);
+
+    @include mobile {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }
+}
+
+
+.header__logo--modals {
+  margin-top: size(55px);
+  margin-bottom: 0;
+  position: relative;
+  z-index: 99999;
+
+  @include tablet {
+    margin-right: 0;
+    margin-bottom: 25px;
+    margin-left: 0;
+  }
+
+  @include mobile {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 30px;
+    padding-bottom: 5px;
   }
 }
 
 .modal-list {
+  @include list-reset();
   position: relative;
   z-index: 99999;
+
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
+
   width: 100%;
-  height: 75vh;
-  @include list-reset();
-  padding: 9.021vw;
+  margin-top: size-vh(85px, 1200px);
+  padding: 0 size(75px);
 
-
-  @include tablet-max {
-    align-items: flex-start;
-    min-height: auto;
-    height: auto;
+  @include tablet {
+    margin-top: 0;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
-  @include mobile-max {
-    margin-bottom: 0;
+  @include mobile {
+    width: 100%;
+    margin-top: 0;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   &__item {
-    width: 50%;
-    max-width: 100%;
+    width: 100%;
+    height: 500px;
+    max-width: size(500px);
 
-    @include tablet-max {
+    @include tablet {
+    }
+
+    @include mobile {
       width: 100%;
-      height: 30vh;
+      max-width: 320px;
+      height: 250px;
     }
 
     &--left {
       background-image: url('../../img/helic.jpg');
       background-repeat: no-repeat;
-      background-position: center 0;
-      background-size: cover;
-
-      @include tablet-max {
-        height: 50vmax;
-      }
+      background-position: center center;
+      background-size: contain;
     }
 
     &--right {
@@ -97,14 +116,10 @@
       align-items: center;
 
       height: auto;
-      padding: 30px;
+      padding: size(20px);
 
-      @include tablet-max {
-        display: block;
-      }
-
-      @include mobile-max {
-        padding: 15px;
+      @include mobile {
+        padding: 0;
       }
     }
 
@@ -126,47 +141,42 @@
     }
   }
 
-
-
   &__text {
-    max-width: 900px;
+    position: relative;
     margin: 0;
     padding: 0;
-
-    font-size: 30px;
-    line-height: 30px * 1.2;
     text-align: center;
+    @include font-medium();
     color: $white;
 
-    @include tablet-max {
-      padding: 0;
-      font-size: 4.1vmin;
-      line-height: 1.3;
+    @include tablet {
+      @include font-small();
     }
 
-    @include mobile-max {
-      font-size: 4.1vmin;
-      line-height: 2;
+    @include mobile {
+      margin-top: 10px;
+      font-size: 16px;
+      line-height: 26px;
     }
 
-    &--top {
-      margin-top: 15vw;
-
-      @include mobile-max {
-        margin-top: 0;
-      }
-    }
 
     &--bottom {
       margin-top: auto;
       width: 100%;
       text-align: left;
       font-size: 16px;
+      line-height: 26px;
 
-      @include mobile-max {
-        margin-top: 50px;
+      @include mobile {
+        font-size: 14px;
+        line-height: 20px;
       }
     }
+  }
+
+  &__text-red {
+    font-weight: bold;
+    color: #d80027;
   }
 
   &__link {
@@ -177,4 +187,12 @@
       color: $white;
     }
   }
+}
+
+.modal-list__text span  {
+  font-family: $montserrat-bold;
+}
+
+.modal-list__text a  {
+  font-family: $montserrat-bold;
 }

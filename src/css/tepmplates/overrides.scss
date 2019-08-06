@@ -1,7 +1,7 @@
-.fancybox-button  {
-  width: 100px;
-  height: 100px;
-  color: #ffffff;
+.fancybox-button {
+  // width: 100px;
+  // height: 100px;
+  // color: #ffffff;
 
   @include mobile-max {
     width: 50px;
@@ -23,7 +23,7 @@
   padding: 0;
 }
 
-.fancybox-slide--html .fancybox-close-small{
+.fancybox-slide--html .fancybox-close-small {
   padding: 0;
 }
 
@@ -44,8 +44,108 @@
   overflow: hidden;
 }
 
-.fancybox-active{
+.fancybox-active {
   height: 100%;
   padding: 0;
 }
 
+body[style] {
+  padding-bottom: 0;
+}
+
+div.fancybox-content {
+  padding: 0;
+  margin-bottom: 0 !important;
+}
+
+.fancybox-slide--html {
+  padding: 0 !important;
+}
+
+.fancybox-slide {
+  min-height: 100vh !important;
+  height: auto;
+}
+
+.fancybox-slide--html .fancybox-close-small {
+  top: 5% !important;
+  right: 7% !important;
+  width: 60px;
+  height: 60px;
+  transform: translate(-40%, -15%);
+  padding: 0 !important;
+  opacity: 1;
+
+  background-image: url('../../img/star.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+
+  &:hover {
+    background-image: url('../../img/red-star-hover.svg');
+  }
+
+  & svg {
+    display: none;
+  }
+
+  @include mobile {
+    width: 50px;
+    height: 50px;
+    top: 30px !important;
+    right: 1px !important;
+  }
+}
+
+.fancybox-navigation .fancybox-button--arrow_right,
+.fancybox-navigation .fancybox-button--arrow_left {
+  width: 75px !important;
+  height: 100px !important;
+  padding: 0 !important;
+  background-color: transparent !important;
+}
+
+.fancybox-navigation .fancybox-button--arrow_right svg path,
+.fancybox-navigation .fancybox-button--arrow_left svg path {
+  fill: none !important;
+  stroke-width: initial !important;
+}
+
+.fancybox-navigation .fancybox-button--arrow_left  {
+
+}
+
+
+
+
+// .fancybox-show-nav .fancybox-navigation .fancybox-button {
+
+//   & div {
+//     padding: 0 !important;
+//   }
+
+//   & div svg {
+//     display: none;
+//   }
+// }
+
+// .fancybox-navigation .fancybox-button--arrow_right {
+//   right: 20px !important;
+//   width: 75px !important;
+//   padding: 0 !important;
+//   background-color: transparent !important;
+
+//   background-image: url('../../img/blue-btn.svg');
+//   background-repeat: no-repeat;
+//   background-position: 0 0;
+//   background-size: 100%;
+//   cursor: pointer;
+
+//   &:hover {
+//     width: 75px !important;
+//     height: 100px !important;
+//     background-image: url('../../img/red-btn-hover.svg');
+
+//   }
+
+// }

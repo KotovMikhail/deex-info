@@ -2,13 +2,11 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   background-color: $black;
   overflow-y: hidden;
 
   @include tablet-max {
-    width: auto;
-    height: 100%;
   }
 
   &__top {
@@ -16,24 +14,29 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: size(40px);
+    padding-bottom: size(40px);
 
     @include desktop-max {
       justify-content: center;
+      padding-top: 25px;
+      padding-bottom: 15px;
     }
   }
 
   &__logo {
-    margin-right: 50px;
+    margin-right: size(50px);
 
     &--modals {
+      margin-top: size(55px);
+      margin-left: size(95px);
       position: relative;
       z-index: 99999;
     }
 
     @include desktop-max {
       margin-right: 0;
+      margin-left: 0;
       margin-bottom: 25px;
     }
 
@@ -45,7 +48,7 @@
   &__title {
     max-width: 100%;
     margin: 0;
-    font-size: 4.15vmin;
+    font-size: size(30px);
     color: $white;
 
     @include desktop-max {
@@ -55,7 +58,11 @@
     }
 
     @include tablet-max {
-      // font-size: 24px;
+      font-size: size(25px);
+    }
+
+    @include mobile-max {
+      font-size: size(16px);
     }
   }
 }
@@ -65,19 +72,17 @@
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  height: 100%;
+  flex: 1 0 auto;
   @include list-reset();
 
-  @include tablet-max {
-    flex-direction: row;
+  @include tablet {
     min-height: auto;
     height: auto;
   }
 
   &__item {
-    width: 22.5%;
-    max-width: 600px;
-    height: 75vh;
+    width: 22%;
+    height: size-vh(550px, $container-height);
     background-image: url('../img/helic.jpg');
     background-repeat: no-repeat;
     background-position: center center;
@@ -104,80 +109,27 @@
       background-image: url('../../img/roulet.jpg');
     }
 
-    @include desktop-2048 {
-      max-width: 100%;
-      background-position: center 15%;
-    }
-
-    @include tablet-max {
-      width: 47%;
-      height: 60vh;
-      // height: 100vmin;
-      flex-basis: auto;
-      margin-bottom: 50px;
-
+    @include tablet {
+      width: 48%;
+      height: size-vh(250px, 500px);
       filter: none;
+      margin-bottom: 50px;
+      background-position: top center;
 
-      &:last-child {
+      &:nth-child(n + 3) {
         margin-bottom: 0;
       }
     }
 
     @include mobile-max {
-      height: 100vmin;
+      height: size-vh(250px, $container-height);
+
       width: 100%;
       margin-bottom: 40px;
-    }
-  }
-}
 
-.social-list {
-  @include list-reset();
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 100%;
-  padding: 40px 2.9%;
-  flex: 0 0 auto;
-
-  @include tablet-max {
-    justify-content: center;
-  }
-
-  &__item {
-    position: relative;
-    width: 40px;
-    height: 40px;
-
-    @include tablet-max {
-      padding: 20px;
-    }
-
-    @include mobile-max {
-      padding: 15px;
-    }
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      transform: translate(0%, 0%);
-      background-image: url('../../img/icon-bitcoin.svg');
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      background-size: cover;
-
-      width: 100%;
-      height: 100%;
-
-      cursor: pointer;
+      &:nth-child(n + 3) {
+        margin-bottom: 40px;
+      }
     }
   }
 }

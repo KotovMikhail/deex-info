@@ -1,5 +1,6 @@
 @import 'global/variables';
 @import 'global/mixins';
+@import 'tepmplates/overrides';
 @import 'global/global';
 @import 'global/fonts';
 @import '../bower_components/fancybox/dist/jquery.fancybox';
@@ -8,5 +9,6 @@
 @import 'tepmplates/modals';
 @import 'tepmplates/footer';
 @import 'tepmplates/subscribe';
+@import 'tepmplates/social';
 
-@import 'tepmplates/overrides'; // переопределение стилей fancy-box
+ // переопределение стилей fancy-box

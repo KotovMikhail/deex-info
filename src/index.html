@@ -5,13 +5,14 @@
   <!-- <link rel="preload" href="/fonts/ptsans.woff2" as="font">
   <link rel="preload" href="/fonts/ptsansbold.woff2" as="font"> -->
   <meta charset="UTF-8">
-  <meta name="Description" content="Получите криптовалюту быстро и просто. Кран, лотерея, aidrop. Все способы получить deex всего за несколько кликов.">
+  <meta name="Description"
+    content="Получите криптовалюту быстро и просто. Кран, лотерея, aidrop. Все способы получить deex всего за несколько кликов.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.min.css">
   <title>Цифровые монеты deex для всех. Получите криптовалюту быстро и просто.</title>
 
-  <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5d3b12c2af24be0012385d3b&product=inline-share-buttons' async='async'></script>
+  <!-- <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5d3b12c2af24be0012385d3b&product=inline-share-buttons' async='async'></script> -->
 
 <body>
 
@@ -44,91 +45,159 @@
         <li class="list__item list__item--fourth" title="Airdrop" data-fancybox data-src="#fourth-slide"></li>
       </ul>
 
-      <div class="social-list social-list--modal">
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link" href="https://bitcointalk.org/index.php?topic=5049227.0" target="_blank"><img
+              class="social__img social__img--bc" src="../img/icon-bitcoin.svg" alt="Bitcoin forum" width="40"
+              height="40" /></a>
+        </li>
 
+        <li class="social__item">
+          <a class="social__link" href="https://medium.com/@deexexchange_official" target="_blank"><img
+              class="social__img social__img--m" src="../img/icon-m.svg" alt="Medium" width="40" height="40" /></a>
+        </li>
+
+        <li class="social__item">
+          <a class="social__link" href="https://www.reddit.com/user/the_deex/" target="_blank"><img
+              class="social__img social__img--unknown-2" src="../img/icon-unknown-2.svg" alt="Reddit" width="40"
+              height="40" /></a>
+        </li>
+
+        <li class="social__item">
+          <a class="social__link" href="https://steemit.com/@deex" target="_blank"><img
+              class="social__img social__img--unknown" src="../img/icon-unknown.svg" alt="Steemit" width="40"
+              height="40" /></a>
+        </li>
+
+        <li class="social__item">
+          <a class="social__link" href="https://t.me/deex_exchange" target="_blank"><img
+              class="social__img social__img--tg" src="../img/icon-tg.svg" alt="Telegram" width="40" height="40" /></a>
+        </li>
+
+        <li class="social__item">
+          <a class="social__link" href="https://www.youtube.com/channel/UC5oYUk9QC4kbM5ZBpodOUcQ" target="_blank"><img
+              class="social__img social__img--yout" src="../img/icon-yout.svg" alt="Youtube" width="40"
+              height="40" /></a>
+        </li>
+
+        <li class="social__item">
+          <a class="social__link" href="https://www.facebook.com/groups/deex.exchange/" target="_blank"><img
+              class="social__img social__img--fb" src="../img/icon-fb.svg" alt="Facebook" width="40" height="40" /></a>
+        </li>
+
+        <li class="social__item">
+          <a class="social__link" href="https://twitter.com/deex_exchange" target="_blank"><img
+              class="social__img social__img--tw" src="../img/icon-tw.svg" alt="Twitter" width="40" height="40" /></a>
+        </li>
+
+        <li class="social__item">
+          <a class="social__link" href="https://vk.com/deex.exchange" target="_blank"><img
+              class="social__img social__img--vk" src="../img/icon-vk.svg" alt="Vkontakte" width="40" height="40" /></a>
+        </li>
+
+        <li class="social__item">
+          <a class="social__link" href="https://www.instagram.com/the_deex/" target="_blank"><img
+              class="social__img social__img--inst" src="../img/icon-inst.svg" alt="Instagramm" width="40"
+              height="40" /></a>
+        </li>
+      </ul>
+
+      //= templates/subscribe.html
+
+      <!-- _____________ 1 попап _________________ -->
+
+      <div class="modal" id="first-slide">
+        //= templates/header.html
+        <ul class="modal-list">
+          <li class="modal-list__item modal-list__item--left"></li>
+          <li class="modal-list__item modal-list__item--right">
+            <p class="modal-list__text">Получить цифровые монеты еще никогда не было так просто. Все, что вам нужно –
+              зарегистрироваться на бирже и следить за новостями. Мы периодически проводим акции по раздаче токенов. Вся
+              информация публикуется в нашем <a class="modal-list__link" href="https://deex.blog"
+                target="blank">блоге</a>.</p>
+          </li>
+        </ul>
+        <div class="modal__abstr">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/abstr-mobile.png">
+              <img src="img/abstr-bg.png" alt="Неродные просторы">
+            </picture>
+          </div>
+      </div>
+
+      <!-- _____________ 2 попап _________________ -->
+
+      <div class="modal second-modal " id="second-slide">
+        //= templates/header.html
+        <ul class="modal-list">
+          <li class="modal-list__item modal-list__item--left modal-list__item--second"></li>
+          <li class="modal-list__item modal-list__item--right">
+            <p class="modal-list__text"><span class="modal-list__text-red">Крипто-кран Deex</span> – отличная
+              возможность пополнить свой цифровой кошелек на Deex Exchange. Просто заходите на <a
+                class="modal-list__link" href="https://deex4free.com/" target="blank"
+                title="https://deex4free.com/">deex4free.com</a> и вводите имя своего аккаунта для получения токенов.
+            </p>
+          </li>
+        </ul>
+
+        <div class="modal__abstr">
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/abstr-mobile.png">
+            <img src="img/abstr-bg.png" alt="Неродные просторы">
+          </picture>
+        </div>
 
       </div>
 
-      //= templates/subscribe.html
+      <!-- _____________ 3 попап _________________ -->
+
+      <div class="modal third-modal " id="third-slide">
+        //= templates/header.html
+        <ul class="modal-list">
+          <li class="modal-list__item modal-list__item--left modal-list__item--third"></li>
+          <li class="modal-list__item modal-list__item--right modal-list__item--star">
+            <p class="modal-list__text modal-list__text--top">Хотите купить deex* или обменять токены bts на erc-20? Для
+              этого у нас есть специальный сервис - <a class="modal-list__link" href="https://cryptoplat.io/"
+                target="blank" title="https://cryptoplat.io/">cryptoplat.io</a>. Надежный и быстрый способ обмена
+              фиатных средств на цифровую валюту проекта.
+            </p>
+
+            <p class="modal-list__text modal-list__text--bottom">* - покупка токенов доступна только для владельцев карт
+              российских баноков.
+            </p>
+          </li>
+        </ul>
+        <div class="modal__abstr">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/abstr-mobile.png">
+              <img src="img/abstr-bg.png" alt="Неродные просторы">
+            </picture>
+          </div>
+      </div>
+
+      <!-- _____________ 4 попап _________________ -->
+      <div class="modal fourth-modal " id="fourth-slide">
+        //= templates/header.html
+        <ul class="modal-list">
+          <li class="modal-list__item modal-list__item--left modal-list__item--fourth"></li>
+          <li class="modal-list__item modal-list__item--right">
+            <p class="modal-list__text">Уверены, что можете угадать стоимость токена deex на определенную дату? Тогда
+              это ваш шанс получить награду на <a class="modal-list__link" href="https://loto.deex.exchange/"
+                target="blank" title="https://cryptoplat.io/">loto.deex.exchange</a>. Делайте ставки и увеличивайте свои
+              шансы на победу. Розыгрыши проводятся регулярно, призы начисляются автоматически. Заходите почаще!</p>
+          </li>
+        </ul>
+        <div class="modal__abstr">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/abstr-mobile.png">
+              <img src="img/abstr-bg.png" alt="Неродные просторы">
+            </picture>
+          </div>
+      </div>
     </div>
-
-   <!-- _____________ 1 попап _________________ -->
-
-    <div class="modal container" id="first-slide">
-
-      //= templates/header.html
-
-      <ul class="modal-list">
-        <li class="modal-list__item modal-list__item--left"></li>
-        <li class="modal-list__item modal-list__item--right">
-          <p class="modal-list__text">Получить цифровые монеты еще никогда не было так просто. Все, что вам нужно – зарегистрироваться на бирже и следить за новостями. Мы периодически проводим акции по раздаче токенов. Вся информация публикуется в нашем <a class="modal-list__link" href="https://deex.blog" target="blank">блоге</a>.</p>
-        </li>
-      </ul>
-
-
-
-
-    </div>
-
-
-
-    <!-- _____________ 2 попап _________________ -->
-
-    <div class="modal second-modal container" id="second-slide">
-
-      //= templates/header.html
-
-      <ul class="modal-list">
-        <li class="modal-list__item modal-list__item--left modal-list__item--second"></li>
-        <li class="modal-list__item modal-list__item--right">
-          <p class="modal-list__text">Крипто-кран Deex – отличная возможность пополнить свой цифровой кошелек на Deex Exchange. Просто заходите на <a class="modal-list__link" href="https://deex4free.com/" target="blank" title="https://deex4free.com/">deex4free.com</a> и вводите имя своего аккаунта для получения токенов.</p>
-        </li>
-      </ul>
-
-      <div class="modal__abstr"><img src="img/abstr-bg.png" alt="" ></div>
-
-    </div>
-
-    <!-- _____________ 3 попап _________________ -->
-
-    <div class="modal third-modal container" id="third-slide">
-
-      //= templates/header.html
-
-      <ul class="modal-list">
-        <li class="modal-list__item modal-list__item--left modal-list__item--third"></li>
-        <li class="modal-list__item modal-list__item--right modal-list__item--star">
-          <p class="modal-list__text modal-list__text--top">Хотите купить deex* или обменять токены bts на erc-20? Для этого у нас есть специальный сервис - <a class="modal-list__link" href="https://cryptoplat.io/" target="blank" title="https://cryptoplat.io/">cryptoplat.io</a>. Надежный и быстрый способ обмена фиатных средств на цифровую валюту проекта.
-          </p>
-
-          <p class="modal-list__text modal-list__text--bottom">* - покупка токенов доступна только для владельцев карт российских баноков.
-          </p>
-        </li>
-      </ul>
-
-
-
-    </div>
-
-    <!-- _____________ 4 попап _________________ -->
-
-    <div class="modal fourth-modal container" id="fourth-slide">
-
-      //= templates/header.html
-
-      <ul class="modal-list">
-        <li class="modal-list__item modal-list__item--left modal-list__item--fourth"></li>
-        <li class="modal-list__item modal-list__item--right">
-          <p class="modal-list__text">Уверены, что можете угадать стоимость токена deex на определенную дату? Тогда это ваш шанс получить награду на <a class="modal-list__link" href="https://loto.deex.exchange/" target="blank" title="https://cryptoplat.io/">loto.deex.exchange</a>. Делайте ставки и увеличивайте свои шансы на победу. Розыгрыши проводятся регулярно, призы начисляются автоматически. Заходите почаще!</p>
-        </li>
-      </ul>
-
-
-
-
-    </div>
-
   </div>
+
+
 
 
 

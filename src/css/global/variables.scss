@@ -1,30 +1,38 @@
-$desktop-2048: 2048px;
-$desktop: 1440px;
-$tablet: 1024px;
+$desktop-2048: 2047px;
+$desktop: 1339px;
+$tablet: 1023px;
 $mobile: 767px;
 $mobile-sm: 539px;
 
-// Colors
+$width-desktop: 1440px;
+$width-laptop:  1200px;
+$width-tablet:   768px;
+$width-min:      320px;
 
+$container-height: 800px;
+$width-min: 320px;
+// Retina
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+// Colors
 $white: #ffffff;
 $black: #000000;
 $grey: #333333;
 $light-grey: #4f4f4f;
 $blue: #2f80ed;
 $green: #02d4bb;
+
 $box-shadow: 0 4px 8px rgba(0,0,0,0.25);
 $linear: linear-gradient(82deg, #1EE3D1, #00D2B9);
 
 $bgolor: #ebebeb;
 
-// Fonts
+// шрифты
+$font-main: 16px;
 
 $montserrat-regular: "Montserrat-Regular", "Arial", sans-serif;
 $montserrat-medium: "Montserrat-Medium", "Arial", sans-serif;
 $montserrat-semibold: "Montserrat-Semibold", "Arial", sans-serif;
 $montserrat-bold: "Montserrat-Bold", "Arial", sans-serif;
-
-// Retina
-
-$retina-dpi: 144dpi;
-$retina-dppx: 1.5dppx;
