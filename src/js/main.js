@@ -39,7 +39,7 @@ var data = {
 
 subscribeMail.addEventListener('invalid', function (evt) {
   if (subscribeMail.validity.patternMismatch) {
-    subscribeMail.setCustomValidity('Please enter a valid email address.');
+    subscribeMail.setCustomValidity('Please enter a valid email address');
   } else if (subscribeMail.validity.valueMissing) {
     subscribeMail.setCustomValidity('Required field');
   } else {
@@ -50,7 +50,7 @@ subscribeMail.addEventListener('invalid', function (evt) {
 var readyLoad = function () {
   setTimeout(function () {
     subscribeBlock.classList.add('is-subscribe-open');
-  }, 1000)
+  }, 8000)
 };
 
 var popupSuccessClose = function () {

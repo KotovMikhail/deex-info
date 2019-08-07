@@ -134,6 +134,7 @@ gulp.task('img-compress', () => {
 gulp.task('html', () => {
   return gulp.src(path.src.html) //Выберем файлы по нужному пути
     .pipe(rigger()) //Прогоним через rigger
+    .pipe(replace('src="../img', 'src="img'))
     .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
     .pipe(reload({
       stream: true
