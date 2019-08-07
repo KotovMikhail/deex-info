@@ -43,6 +43,13 @@
     &--modals {
       margin-bottom: 0;
     }
+
+    @include mobile {
+      & svg {
+        width: 180px;
+        height: auto;
+      }
+    }
   }
 
   &__title {
@@ -57,11 +64,11 @@
       margin-right: 0;
     }
 
-    @include tablet-max {
+    @include tablet {
       font-size: size(25px);
     }
 
-    @include mobile-max {
+    @include mobile {
       font-size: size(16px);
     }
   }

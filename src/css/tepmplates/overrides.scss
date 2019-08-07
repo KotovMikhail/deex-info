@@ -1,8 +1,4 @@
 .fancybox-button {
-  // width: 100px;
-  // height: 100px;
-  // color: #ffffff;
-
   @include mobile-max {
     width: 50px;
     height: 50px;
@@ -110,42 +106,3 @@ div.fancybox-content {
   fill: none !important;
   stroke-width: initial !important;
 }
-
-.fancybox-navigation .fancybox-button--arrow_left  {
-
-}
-
-
-
-
-// .fancybox-show-nav .fancybox-navigation .fancybox-button {
-
-//   & div {
-//     padding: 0 !important;
-//   }
-
-//   & div svg {
-//     display: none;
-//   }
-// }
-
-// .fancybox-navigation .fancybox-button--arrow_right {
-//   right: 20px !important;
-//   width: 75px !important;
-//   padding: 0 !important;
-//   background-color: transparent !important;
-
-//   background-image: url('../../img/blue-btn.svg');
-//   background-repeat: no-repeat;
-//   background-position: 0 0;
-//   background-size: 100%;
-//   cursor: pointer;
-
-//   &:hover {
-//     width: 75px !important;
-//     height: 100px !important;
-//     background-image: url('../../img/red-btn-hover.svg');
-
-//   }
-
-// }
