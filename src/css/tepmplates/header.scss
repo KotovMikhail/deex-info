@@ -19,20 +19,13 @@
 
     @include desktop-max {
       justify-content: center;
-      padding-top: 40px;
-      padding-bottom: 35px;
+      padding-top: 35px;
+      padding-bottom: 25px;
     }
   }
 
   &__logo {
     margin-right: size(50px);
-
-    &--modals {
-      margin-top: size(55px);
-      margin-left: size(95px);
-      position: relative;
-      z-index: 99999;
-    }
 
     @include desktop-max {
       margin-right: 0;
@@ -40,13 +33,9 @@
       margin-bottom: 25px;
     }
 
-    &--modals {
-      margin-bottom: 0;
-    }
-
     @include mobile {
       & svg {
-        width: 180px;
+        width: 150px;
         height: auto;
       }
     }
@@ -166,7 +155,9 @@
   }
 
   @include mobile {
-    font-size: 24px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.2;
   }
 
   &--modal {
@@ -174,7 +165,8 @@
 
     @include mobile {
       font-size: 24px;
-      margin-top: 15px;
+      line-height: 1.2;
+      margin-top: 10px;
     }
   }
 }
