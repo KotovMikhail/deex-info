@@ -39,7 +39,6 @@
   }
 }
 
-
 .header__logo--modals {
   margin-top: size(55px);
   margin-bottom: 0;
@@ -70,13 +69,17 @@
   flex-wrap: wrap;
 
   width: 100%;
-  margin-top: size-vh(85px, 1200px);
+  margin-top: size(5px);
   padding: 0 size(75px);
 
   @include tablet {
     margin-top: 0;
     padding-left: 25px;
     padding-right: 25px;
+
+    flex-direction: column;
+    align-items: center;
+
   }
 
   @include mobile {
@@ -91,11 +94,9 @@
 
   &__item {
     width: 100%;
-    height: 500px;
     max-width: size(500px);
+    height: 600px;
 
-    @include tablet {
-    }
 
     @include mobile {
       width: 100%;
@@ -108,15 +109,38 @@
       background-repeat: no-repeat;
       background-position: center center;
       background-size: contain;
+
+      @include tablet {
+        width: 100%;
+        max-width: 400px;
+        height: 400px;
+        margin-bottom: 15px;
+      }
+
+      @include mobile {
+        max-width: 350px;
+        height: 350px;
+      }
     }
 
     &--right {
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
 
       height: auto;
       padding: size(20px);
+      padding-top: 0;
+      padding-left: 50px;
+
+      @include desktop-only {
+        padding-left: size(70px);
+      }
+
+      @include tablet {
+        padding: 0;
+        padding-top: 15px;
+      }
 
       @include mobile {
         padding: 0;
@@ -144,28 +168,32 @@
   &__text {
     position: relative;
     margin: 0;
+    margin-bottom: size(35px);
     padding: 0;
-    text-align: center;
-    @include font-medium();
+    text-align: left;
+    @include font-medium-xs();
     color: $white;
 
     @include tablet {
-      @include font-small();
+      width: 100%;
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 25px;
+      text-align: center;
     }
 
     @include mobile {
       margin-top: 10px;
-      font-size: 16px;
-      line-height: 26px;
+      font-size: 24px;
+      line-height: 32px;
     }
 
-
     &--bottom {
-      margin-top: auto;
       width: 100%;
       text-align: left;
-      font-size: 16px;
-      line-height: 26px;
+      font-size: size(16px);
+      line-height: size(26px);
+      margin-bottom: size(18px);
 
       @include mobile {
         font-size: 14px;
@@ -189,10 +217,178 @@
   }
 }
 
-.modal-list__text span  {
+.modal-list__text span {
   font-family: $montserrat-bold;
 }
 
-.modal-list__text a  {
+.modal-list__text a {
   font-family: $montserrat-bold;
+}
+
+.site {
+  &__list-box {
+    @include tablet {
+      width: 100%;
+      max-width: 375px;
+      margin: 0 auto;
+    }
+  }
+
+  &__list {
+    @include list-reset;
+    margin: 0 auto;
+
+    @include tablet-small {
+      margin: 0 auto;
+    }
+
+    @include mobile {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    margin-bottom: size-vh(10px, $container-height);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include tablet {
+      margin-bottom: 17px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    color: $white;
+    text-decoration: none;
+    @include font-medium-xs;
+    padding-left: 110px;
+    transition: all 0.3s ease-in-out;
+
+    @include tablet {
+      font-size: 24px;
+      line-height: 32px;
+      padding-left: 110px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    &:hover {
+      color: $yellow;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: size(8px);
+      left: 0;
+      width: 60px;
+      height: 30px;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @include mobile {
+        top: 0;
+        transform: none;
+      }
+
+      @include tablet-small {
+        width: 60px;
+        height: 30px;
+      }
+    }
+
+    &--deex {
+      &::before {
+        left: -5px;
+        width: 90px;
+        background-image: url('../../img/logo.svg');
+      }
+
+      @include mobile {
+        left: -20px;
+      }
+    }
+
+    &--cryptoplat {
+      &::before {
+        left: -2px;
+        width: 90px;
+        background-image: url('../../img/list/pict1.png');
+      }
+
+      @include mobile {
+        left: -8px;
+      }
+    }
+
+    &--sistemkoin {
+      &::before {
+        width: 90px;
+        background-image: url('../../img/list/Sistemkoin-Logo.png');
+      }
+    }
+
+    &--btc-alpha {
+      &::before {
+        left: -12px;
+        background-image: url('../../img/list/btcalpha.png');
+      }
+    }
+
+    &--50com {
+      &::before {
+        width: 140px;
+        left: -45px;
+        background-image: url('../../img/list/50com.png');
+
+        @include mobile {
+          left: -60px;
+        }
+      }
+    }
+
+    &--exchange {
+      &::before {
+        width: 100%;
+        height: 60px;
+        top: -5px;
+        left: -19px;
+        background-image: url('../../img/list/cbex.png');
+
+        @include mobile {
+          left: 5px;
+        }
+      }
+    }
+
+    &--exenium {
+      &::before {
+        width: 90px;
+        left: -15px;
+        background-image: url('../../img/list/ex.png');
+      }
+    }
+  }
+}
+
+.mark {
+  color: $white;
+  margin-bottom: 0;
+  @include font-xs;
+
+  @include tablet {
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+  }
 }

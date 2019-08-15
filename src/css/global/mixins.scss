@@ -66,6 +66,12 @@
   }
 }
 
+@mixin tablet-small {
+  @media(max-width:$widht-tablet-lg - 1px) {
+    @content;
+  }
+}
+
 @mixin tablet-only {
   @media (max-width: $width-laptop - 1px) and (min-width: $width-tablet) {
     @content;
@@ -105,6 +111,12 @@
 @mixin font-medium {
   font-size: size(32px);
   line-height: size(40px);
+  font-weight: normal;
+}
+
+@mixin font-medium-xs {
+  font-size: size(26px);
+  line-height: size(35px);
   font-weight: normal;
 }
 
